@@ -1,1 +1,11 @@
+SITE_TEMPLATE_PATH - путь к активному шаблону
+
 $APPLICATION->GetCurPage(true/false ); //  url текущей траницы
+
+$APPLICATION->ShowTitle();
+
+\Bitrix\Main\Page\Asset::getInsatnce()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
+\Bitrix\Main\Page\Asset::getInsatnce()->addString('<meta name="viewport" ....');
+
+CJSCore::Init(['jquery']);
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/myjs.js')
